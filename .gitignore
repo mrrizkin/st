@@ -1,6 +1,14 @@
-
+# original file after patching
 Makefile.orig
 config.def.h.orig
 st.c.orig
 st.h.orig
 x.c.orig
+
+# object file
+boxdraw.o
+st.o
+x.o
+
+# binary file
+st
