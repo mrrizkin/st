@@ -37,6 +37,12 @@ enum glyph_attribute {
 	ATTR_BOLD_FAINT = ATTR_BOLD | ATTR_FAINT,
 };
 
+enum drawing_mode {
+	DRAW_NONE = 0,
+	DRAW_BG   = 1 << 0,
+	DRAW_FG   = 1 << 1,
+};
+
 enum selection_mode {
 	SEL_IDLE = 0,
 	SEL_EMPTY = 1,
@@ -135,3 +141,4 @@ extern unsigned int tabspaces;
 extern unsigned int defaultfg;
 extern unsigned int defaultbg;
 extern const int boxdraw, boxdraw_bold, boxdraw_braille;
+
