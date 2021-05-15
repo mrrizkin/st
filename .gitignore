@@ -4,9 +4,7 @@ st.desktop
 # original file after patching
 Makefile.orig
 config.def.h.orig
-st.c.orig
-st.h.orig
-x.c.orig
+*.orig
 
 # use config.def instead
 config.h
