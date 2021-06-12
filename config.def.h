@@ -133,9 +133,6 @@ static const char *colorname[] = {
   [13] = "#ffafaf",
   [14] = "#87d7d7",
   [15] = "#e4e4e4",
-
-  /* additional custom color */
-  [235] = "#3a3a3a", /* bg0 */
 };
 
 /*
@@ -143,7 +140,7 @@ static const char *colorname[] = {
  * foreground, background, cursor
  */
 unsigned int defaultfg = 7;
-unsigned int defaultbg = 235;
+unsigned int defaultbg = 237;
 static unsigned int defaultcs = 7;
 static unsigned int defaultrcs = 235;
 
