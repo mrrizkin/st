@@ -115,34 +115,40 @@ unsigned int tabspaces = 8;
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#4e4e4e",
-  [1] = "#d68787",
-  [2] = "#5f865f",
-  [3] = "#d8af5f",
-  [4] = "#85add4",
-  [5] = "#d7afaf",
-  [6] = "#87afaf",
-  [7] = "#d0d0d0",
+  "#181a1c",
+  "#ff6578",
+  "#9dd274",
+  "#eacb64",
+  "#72cce8",
+  "#ba9cf3",
+  "#f69c5e",
+  "#e1e3e4",
 
   /* 8 bright colors */
-  [8]  = "#626262",
-  [9]  = "#d75f87",
-  [10] = "#87af87",
-  [11] = "#ffd787",
-  [12] = "#add4fb",
-  [13] = "#ffafaf",
-  [14] = "#87d7d7",
-  [15] = "#e4e4e4",
+  "#828a9a",
+  "#ff6578",
+  "#9dd274",
+  "#eacb64",
+  "#72cce8",
+  "#ba9cf3",
+  "#f69c5e",
+  "#e1e3e4",
+
+  [255] = 0,
+
+  /* more colors can be added after 255 to use with DefaultXX */
+  "#2c2e34",
+  "#e2e2e3",
 };
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 237;
-static unsigned int defaultcs = 7;
-static unsigned int defaultrcs = 235;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
