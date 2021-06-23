@@ -16,3 +16,6 @@ x.o
 
 # binary file
 st
+
+# ccls
+.ccls-cache
