@@ -5,8 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+static char *font = "JetBrainsMono Nerd Font:pixelsize=14:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
+  "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true",
+  "JoyPixels:pixelsize=14:antialias=true:autohint=true",
 };
 
 static int borderpx = 0;
@@ -110,32 +113,31 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+	/* 8 normal colors */
+	"#3b4252", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#88c0d0", /* cyan    */
+	"#e5e9f0", /* white   */
 
-  /* 8 normal colors */
-  "#181a1c",
-  "#ff6578",
-  "#9dd274",
-  "#eacb64",
-  "#72cce8",
-  "#ba9cf3",
-  "#f69c5e",
-  "#e1e3e4",
+	/* 8 bright colors */
+	"#4c566a", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#8fbcbb", /* cyan    */
+	"#eceff4", /* white   */
 
-  /* 8 bright colors */
-  "#828a9a",
-  "#ff6578",
-  "#9dd274",
-  "#eacb64",
-  "#72cce8",
-  "#ba9cf3",
-  "#f69c5e",
-  "#e1e3e4",
+	[255] = 0,
 
-  [255] = 0,
-
-  /* more colors can be added after 255 to use with DefaultXX */
-  "#2c2e34",
-  "#e2e2e3",
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#2e3440", /* background */
+	"#d8dee9", /* foreground */
 };
 
 /*
