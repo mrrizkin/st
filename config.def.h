@@ -114,30 +114,31 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#000000", /* black   */
-	"#cd0000", /* red     */
-	"#00cd00", /* green   */
-	"#cdcd00", /* yellow  */
-	"#0000ee", /* blue    */
-	"#cd00cd", /* magenta */
-	"#00cdcd", /* cyan    */
-	"#e5e5e5", /* white   */
+	"#2b3339", /* "#323d43" | "#000000" | black   */
+	"#e67e80", /* "#cd0000" | red     */
+	"#a7c080", /* "#00cd00" | green   */
+	"#dbbc7f", /* "#cdcd00" | yellow  */
+	"#7fbbb3", /* "#0000ee" | blue    */
+	"#d699b6", /* "#cd00cd" | magenta */
+	"#83c092", /* "#00cdcd" | cyan    */
+	"#f8f0dc", /* "#5c6a72" | "#d3c6aa" | "#e5e5e5" | white   */
 
+	// TODO: bright colors everforest?
 	/* 8 bright colors */
-	"#7f7f7f", /* black   */
-	"#ff0000", /* red     */
-	"#00ff00", /* green   */
-	"#ffff00", /* yellow  */
-	"#5c5cff", /* blue    */
-	"#ff00ff", /* magenta */
-	"#00ffff", /* cyan    */
-	"#ffffff", /* white   */
+	"#5c6a72", /* "#7f7f7f" | black   */
+	"#f85552", /* "#ff0000" | red     */
+	"#8da101", /* "#00ff00" | green   */
+	"#dfa000", /* "#ffff00" | yellow  */
+	"#3a94c5", /* "#5c5cff" | blue    */
+	"#df69ba", /* "#ff00ff" | magenta */
+	"#35a77c", /* "#00ffff" | cyan    */
+	"#b7bda9", /* "#ffffff" | white   */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#000000", /* background */
-	"#00ff00", /* foreground */
+	"#323d43", /* "#000000" | background */
+	"#d3c6aa", /* "#00ff00" | foreground */
 };
 
 /*
