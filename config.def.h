@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=14:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-  "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true",
-  "JoyPixels:pixelsize=14:antialias=true:autohint=true",
+  "Hack Nerd Font:pixelsize=12:antialias=true:autohint=true",
+  "JoyPixels:pixelsize=12:antialias=true:autohint=true",
 };
 
 static int borderpx = 0;
@@ -111,34 +111,37 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/* bg opacity */
+float alpha = 0.9;
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#2b3339", /* "#323d43" | "#000000" | black   */
-	"#e67e80", /* "#cd0000" | red     */
-	"#a7c080", /* "#00cd00" | green   */
-	"#dbbc7f", /* "#cdcd00" | yellow  */
-	"#7fbbb3", /* "#0000ee" | blue    */
-	"#d699b6", /* "#cd00cd" | magenta */
-	"#83c092", /* "#00cdcd" | cyan    */
-	"#f8f0dc", /* "#5c6a72" | "#d3c6aa" | "#e5e5e5" | white   */
+	"#2b3339", /* black   */
+	"#f85552", /* red     */
+	"#8da101", /* green   */
+	"#dfa000", /* yellow  */
+	"#3a94c5", /* blue    */
+	"#df69ba", /* magenta */
+	"#35a77c", /* cyan    */
+	"#f8f0dc", /* white   */
 
 	// TODO: bright colors everforest?
 	/* 8 bright colors */
-	"#5c6a72", /* "#7f7f7f" | black   */
-	"#f85552", /* "#ff0000" | red     */
-	"#8da101", /* "#00ff00" | green   */
-	"#dfa000", /* "#ffff00" | yellow  */
-	"#3a94c5", /* "#5c5cff" | blue    */
-	"#df69ba", /* "#ff00ff" | magenta */
-	"#35a77c", /* "#00ffff" | cyan    */
-	"#b7bda9", /* "#ffffff" | white   */
+	"#5c6a72", /* black   */
+	"#e67e80", /* red     */
+	"#a7c080", /* green   */
+	"#dbbc7f", /* yellow  */
+	"#7fbbb3", /* blue    */
+	"#d699b6", /* magenta */
+	"#83c092", /* cyan    */
+	"#b7bda9", /* white   */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#323d43", /* "#000000" | background */
-	"#d3c6aa", /* "#00ff00" | foreground */
+	"#323d43", /* background */
+	"#d3c6aa", /* foreground */
 };
 
 /*
