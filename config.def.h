@@ -126,7 +126,6 @@ static const char *colorname[] = {
 	"#35a77c", /* cyan    */
 	"#f8f0dc", /* white   */
 
-	// TODO: bright colors everforest?
 	/* 8 bright colors */
 	"#5c6a72", /* black   */
 	"#e67e80", /* red     */
