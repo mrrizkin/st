@@ -8,8 +8,8 @@
 static char *font = "JetBrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-  "Hack Nerd Font:pixelsize=12:antialias=true:autohint=true",
-  "JoyPixels:pixelsize=12:antialias=true:autohint=true",
+  "Iosevka Nerd Font:pixelsize=12:antialias=true:autohint=true",
+  "blobmoji:pixelsize=12:antialias=true:autohint=true",
 };
 
 static int borderpx = 0;
@@ -83,7 +83,7 @@ const int boxdraw = 1;
 const int boxdraw_bold = 0;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 0;
+const int boxdraw_braille = 1;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -112,7 +112,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 1; //0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
