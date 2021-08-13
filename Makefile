@@ -32,7 +32,7 @@ st: $(OBJ)
 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
 
 clean:
-	rm -f st $(OBJ) st-$(VERSION).tar.gz
+	rm -f st $(OBJ) st-$(VERSION).tar.gz config.h
 
 dist: clean
 	mkdir -p st-$(VERSION)
@@ -53,7 +53,6 @@ install: st
 	@echo Please see the README file regarding the terminfo entry of st.
 	mkdir -p $(DESTDIR)$(PREFIX)/share/applications
 	cp -f st.desktop $(DESTDIR)$(PREFIX)/share/applications
-	rm -rf config.h $(OBJ) *.orig st
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
