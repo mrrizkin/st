@@ -5,11 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
+static char *font = "VictorMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-  "Iosevka Nerd Font:pixelsize=12:antialias=true:autohint=true",
-  "blobmoji:pixelsize=12:antialias=true:autohint=true",
+  "JoyPixels:pixelsize=12:antialias=true:autohint=true",
 };
 
 static int borderpx = 0;
@@ -86,10 +85,10 @@ static unsigned int cursorthickness = 2;
  * 0: disable (render all U25XX glyphs normally from the font).
  */
 const int boxdraw = 1;
-const int boxdraw_bold = 0;
+const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 1;
+const int boxdraw_braille = 0;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -122,31 +121,30 @@ float alpha = 1; //0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#252d31", /* black   */
-	"#da6362", /* red     */
-	"#899c40", /* green   */
-	"#bf983d", /* yellow  */
-	"#5a93a2", /* blue    */
-	"#b87b9d", /* magenta */
-	"#569d79", /* cyan    */
-	"#bdc3af", /* white   */
 
-	/* 8 bright colors */
-	"#465258", /* black   */
-	"#e67e80", /* red     */
-	"#a7c080", /* green   */
-	"#dbbc7f", /* yellow  */
-	"#7fbbb3", /* blue    */
-	"#d699b6", /* magenta */
-	"#83c092", /* cyan    */
-	"#fdf6e3", /* white   */
+  /* 8 normal colors */
+  [0] = "#000000", /* black   */
+  [1] = "#cd0000", /* red     */
+  [2] = "#00cd00", /* green   */
+  [3] = "#cdcd00", /* yellow  */
+  [4] = "#0000ee", /* blue    */
+  [5] = "#cd00cd", /* magenta */
+  [6] = "#00cdcd", /* cyan    */
+  [7] = "#e5e5e5", /* white   */
 
-	[255] = 0,
+  /* 8 bright colors */
+  [8]  = "#373b41", /* black   */
+  [9]  = "#ff0000", /* red     */
+  [10] = "#00ff00", /* green   */
+  [11] = "#ffff00", /* yellow  */
+  [12] = "#5c5cff", /* blue    */
+  [13] = "#ff00ff", /* magenta */
+  [14] = "#00ffff", /* cyan    */
+  [15] = "#ffffff", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#2f383e", /* background */
-	"#d3c6aa", /* foreground */
+  /* special colors */
+  [256] = "#000000", /* background */
+  [257] = "#ffffff", /* foreground */
 };
 
 /*
@@ -157,6 +155,19 @@ unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 256;
+
+/*
+ * Default colors (colorname index)
+ * foreground, background, cursor
+ */
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
