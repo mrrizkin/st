@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "VictorMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
+static char *font = "JetbrainsMono Nerd Font:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
   "JoyPixels:pixelsize=12:antialias=true:autohint=true",
@@ -117,34 +117,34 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.82;
+float alpha = 1.00; // 0.82;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#000000", /* black   */
-  [1] = "#cd0000", /* red     */
-  [2] = "#00cd00", /* green   */
-  [3] = "#cdcd00", /* yellow  */
-  [4] = "#0000ee", /* blue    */
-  [5] = "#cd00cd", /* magenta */
-  [6] = "#00cdcd", /* cyan    */
-  [7] = "#e5e5e5", /* white   */
+  [0] = "#1f1f1f", /* black   */
+  [1] = "#ff6b68", /* red     */
+  [2] = "#a8c023", /* green   */
+  [3] = "#d6bf55", /* yellow  */
+  [4] = "#5394ec", /* blue    */
+  [5] = "#ae8abe", /* magenta */
+  [6] = "#299999", /* cyan    */
+  [7] = "#999999", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#373b41", /* black   */
-  [9]  = "#ff0000", /* red     */
-  [10] = "#00ff00", /* green   */
+  [8]  = "#555555", /* black   */
+  [9]  = "#ff8785", /* red     */
+  [10] = "#a8c023", /* green   */
   [11] = "#ffff00", /* yellow  */
-  [12] = "#5c5cff", /* blue    */
-  [13] = "#ff00ff", /* magenta */
-  [14] = "#00ffff", /* cyan    */
+  [12] = "#7eaef1", /* blue    */
+  [13] = "#ff99ff", /* magenta */
+  [14] = "#6cdada", /* cyan    */
   [15] = "#ffffff", /* white   */
 
   /* special colors */
-  [256] = "#000000", /* background */
-  [257] = "#ffffff", /* foreground */
+  [256] = "#2b2b2b", /* background */
+  [257] = "#bbbbbb", /* foreground */
 };
 
 /*
