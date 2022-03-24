@@ -1,6 +1,3 @@
-# desktop entry
-st.desktop
-
 # original file after patching
 Makefile.orig
 config.def.h.orig
