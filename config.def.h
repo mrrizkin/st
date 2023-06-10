@@ -121,46 +121,39 @@ float alpha = 0.92;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+	/* 8 normal colors */
+	"#494D64",
+	"#ED8796",
+	"#A6DA95",
+	"#EED49F",
+	"#8AADF4",
+	"#F5BDE6",
+	"#8BD5CA",
+	"#B8C0E0",
 
-  /* 8 normal colors */
-  [0] = "#4e4e4e", /* black   */
-  [1] = "#d68787", /* red     */
-  [2] = "#5f865f", /* green   */
-  [3] = "#d8af5f", /* yellow  */
-  [4] = "#85add4", /* blue    */
-  [5] = "#d7afaf", /* magenta */
-  [6] = "#87afaf", /* cyan    */
-  [7] = "#d0d0d0", /* white   */
+	/* 8 bright colors */
+	"#5B6078",
+	"#ED8796",
+	"#A6DA95",
+	"#EED49F",
+	"#8AADF4",
+	"#F5BDE6",
+	"#8BD5CA",
+	"#A5ADCB",
 
-  /* 8 bright colors */
-  [8]  = "#626262", /* black   */
-  [9]  = "#d75f87", /* red     */
-  [10] = "#87af87", /* green   */
-  [11] = "#ffd787", /* yellow  */
-  [12] = "#add4fb", /* blue    */
-  [13] = "#ffafaf", /* magenta */
-  [14] = "#87d7d7", /* cyan    */
-  [15] = "#e4e4e4", /* white   */
-
-  /* special colors */
-  [256] = "#3a3a3a", /* background */
-  [257] = "#d0d0d0", /* foreground */
-
+    [256] = "#CAD3F5", /* default foreground colour */
+    [257] = "#24273A", /* default background colour */
+    [258] = "#F4DBD6", /*575268*/
 };
 
-/*
- * Default colors (colorname index)
- * foreground, background, cursor
- */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 256;
 
 /*
- * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 258;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
@@ -508,4 +501,3 @@ static char ascii_printable[] =
   " !\"#$%&'()*+,-./0123456789:;<=>?"
   "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
   "`abcdefghijklmnopqrstuvwxyz{|}~";
-
